@@ -35,26 +35,26 @@
                 </select>
             </td>
             <td>
-                <button onclick="convertm" style="background-color: dodgerblue">Convert</button>
+                <input type="button" onclick="convertm()" style="background-color: dodgerblue" value="Convert">
             </td>
             </form>
         </tr>
     </table>
+    <p >Result: <label id="result"></label></p>
     <script>
         function convertm() {
             let invalue = document.getElementById('inm').value;
             let from = document.getElementById('from').value;
             let to = document.getElementById('to').value;
             if (from == to) {
-                document.write("Result: " + invalue);
+                document.getElementById("result").innerText = (invalue);
                 }
-            if (from == 'VN' && to == 'USA'){
-                document.write("Result: " +invalue/24000);
+            else if (from == 'VN' && to == 'USA'){
+                document.getElementById("result").innerText = (invalue/24000);
             }else {
-                document.write("Result: " +invalue*24000);
+                document.getElementById("result").innerText = (invalue*24000);
             }
         }
     </script>
-<!-- thử mãi nhưng vẫn không chạy được thông báo, không biết lỗi ở đâu ạ-->
 </body>
 </html>
