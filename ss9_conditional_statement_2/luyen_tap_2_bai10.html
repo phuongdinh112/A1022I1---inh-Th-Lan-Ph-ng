@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 2 bai 10</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('Nhập sản lượng điện tiêu thụ (kWh):');
+        const m1 = a*1678;
+        const m2 = 50*1678 + (a - 50)*1734;
+        const m3 = 50*1678 + 50*1734 + (a - 100)*2014;
+        const m4 = 50*1678 + 50*1734 + 100*2014 + (a - 200)*2536;
+        const m5 = 50*1678 + 50*1734 + 100*2014 + 100*2536 + (a - 300)*2834;
+        const m6 = 50*1678 + 50*1734 + 100*2014 + 100*2536 + 100*2834 + (a-400)*2927;
+        if (a <= 50){
+            document.write('Tiền điện là: ' + m1);
+        } else if (a <= 100){
+            document.write('Tiền điện là: ' + m2);
+        } else if (a <= 200){
+            document.write('Tiền điện là: ' + m3);
+        }else if (a <= 300){
+            document.write('Tiền điện là: ' + m4);
+        }else if (a <= 400){
+            document.write('Tiền điện là: ' + m5);
+        }else {
+            document.write('Tiền điện là: ' + m6);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh don gian</title>
+</head>
+<style>
+    * {
+        margin: auto;
+        color: blue;
+    }
+    table{
+        padding: 10px;
+        border: 1px solid green;
+    }
+    input {
+        background-color: white;
+        width: 50px;
+        height: 50px;
+    }
+    #calculate {
+        width: 100%;
+    }
+
+    div {
+        width: 220px;
+        height: 56px;
+        background-color: white;
+        color: blue;
+    }
+
+</style>
+<body>
+<h3 style="text-align: center">SIMPLE CALCULATOR</h3>
+    <table>
+        <tr>
+            <td colspan="4">
+                <div id="calculate"></div>
+            </td>
+        </tr>
+        <tr>
+            <th><input type="button" value="1" onclick="handleClick(this)"></th>
+            <th><input type="button" value="2" onclick="handleClick(this)"></th>
+            <th><input type="button" value="3" onclick="handleClick(this)"></th>
+            <th><input type="button" value="+" onclick="handleClick(this)"></th>
+        </tr>
+        <tr>
+            <th><input type="button" value="4" onclick="handleClick(this)"></th>
+            <th><input type="button" value="5" onclick="handleClick(this)"></th>
+            <th><input type="button" value="6" onclick="handleClick(this)"></th>
+            <th><input type="button" value="-" onclick="handleClick(this)"></th>
+        </tr>
+        <tr>
+            <th><input type="button" value="7" onclick="handleClick(this)"></th>
+            <th><input type="button" value="8" onclick="handleClick(this)"></th>
+            <th><input type="button" value="9" onclick="handleClick(this)"></th>
+            <th><input type="button" value="x" onclick="handleClick(this)"></th>
+        </tr>
+        <tr>
+            <th><input type="button" value="C" onclick="handleClick(this)"></th>
+            <th><input type="button" value="0" onclick="handleClick(this)"></th>
+            <th><input type="button" value="=" onclick="handleClick(this)"></th>
+            <th><input type="button" value="/" onclick="handleClick(this)"></th>
+        </tr>
+    </table>
+<script>
+
+    let a = ''
+    let b = ''
+    let opt = ''
+    function handleClick(button) {
+        const result = document.getElementById('calculate')
+
+        const pressValue = button.value
+        if(isNaN(pressValue)) {
+            if (pressValue === 'C') {
+                result.innerText = ''
+                a = ''
+                b = ''
+                opt = ''
+            }
+            if (pressValue === '=') {
+                result.innerText = calculate(a, b, opt)
+                a = ''
+                b = ''
+                opt = ''
+            } else {
+                opt = pressValue
+            }
+        } else {
+            if(opt !== '') {
+                b += pressValue
+                result.innerText = b
+            } else {
+                a += pressValue
+                result.innerText = a
+            }
+        }
+    }
+
+    function calculate(x, y, optt) {
+        const a = Number(x)
+        const b = Number(y)
+        console.log(a,b,optt)
+        switch (optt) {
+            case '+' :
+                return a + b
+            case '-' :
+                return a - b
+            case 'x' :
+                return a * b
+            case '/' :
+                return a / b
+        }
+    }
+</script>
+</body>
+</html>

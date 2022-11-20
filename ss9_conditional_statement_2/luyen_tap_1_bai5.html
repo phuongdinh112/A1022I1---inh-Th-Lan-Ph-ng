@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 1 bai 5</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('Nhập điểm bài kiểm tra');
+        let b = +prompt('Nhập điểm giữa kì');
+        let c = +prompt('Nhập điểm cuối kì');
+        let gpa = ( a + b*2 + c*3)/6;
+        if (gpa > 8.5){
+            document.write('Học lực XUẤT SẮC!');
+        } else if (gpa > 7.0) {
+            document.write('Học lực GIỎI!');
+        } else if (gpa > 5.5) {
+            document.write('Học lực KHÁ!');
+        } else if (gpa > 4.5) {
+            document.write('Học lực TRUNG BÌNH!');
+        }else {
+                document.write('Học lực YẾU!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me?</title>
+</head>
+<body>
+<table style="margin: auto;width: 400px; height: 200px">
+
+    <h1 style="text-align: center; color: hotpink">Do you love me?</h1>
+    <tr style="padding: 50px">
+        <th><input type="button" value=" YES " onclick="yesClick()" style="position: absolute; height: 40px; width: 50px;background-color: powderblue"/></th>
+        <th><input type="button" id="btnNo" value="  NO  " onmouseover="noHover()" style="position:absolute; height: 40px; width: 50px;background-color: lightpink"/></th>
+    </tr>
+</table>
+    <script>
+    function yesClick()
+    {
+        document.write("Yes. You are right <3 <3 <3");
+    }
+    function noHover()
+    {
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('btnNo').style.left = x + 'px';
+        document.getElementById('btnNo').style.top = y + 'px';
+    }
+</script>
+</body>
+</html>

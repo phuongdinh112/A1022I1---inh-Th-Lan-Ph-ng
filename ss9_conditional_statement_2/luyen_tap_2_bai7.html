@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 2 bai 7</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('Nhập a');
+        let b = +prompt('Nhập b');
+        let c = +prompt('Nhập c');
+        const delta = b*b - 4*a*c;
+        const x1 = (-b + Math.sqrt(delta))/(2*a);
+        const x2 = (-b - Math.sqrt(delta))/(2*a);
+        if (delta < 0) {
+            document.write('Phương trình vô nghiệm.');
+        } else if (delta > 0) {
+            document.write('Phương trình có 2 nghiệm phân biệt là: x1= ' + x1 + ' và x2 = ' + x2);
+        } else {
+            document.write('Phương trình có nghiệm kép là: ' + x1);
+        }
+    </script>
+</body>
+</html>

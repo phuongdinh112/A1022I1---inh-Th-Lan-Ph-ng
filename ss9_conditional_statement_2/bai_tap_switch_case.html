@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh so ngay trong thang</title>
+</head>
+<body>
+    <form>
+    <input id='mon' type="number"/>
+    <input type="button" value="Tính số ngày" onclick="calculate()"/>
+    <br/>
+        <h2 id="result">
+
+        </h2>
+
+    <script>
+        function calculate(){
+            const a = +document.getElementById('mon').value;
+            const rs = document.getElementById('result');
+            switch(a) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    rs.innerHTML = 'Tháng ' + a + ' có 31 ngày';
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    rs.innerHTML = 'Tháng ' + a + ' có 30 ngày';
+                    break;
+                case 2:
+                    rs.innerHTML = 'Tháng' + a + ' có 28 hoặc 29 ngày';
+                    break;
+                default:
+                    rs.innerHTML = 'Nhập lại cho đúng số tháng';
+            }
+        }
+
+
+    </script>
+    </form>
+</body>
+</html>
