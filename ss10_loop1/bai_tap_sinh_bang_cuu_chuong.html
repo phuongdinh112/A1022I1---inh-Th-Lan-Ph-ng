@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap sinh bang cuu chuong</title>
+</head>
+<body>
+    <h1 align="center">Multiplication Table</h1>
+    <script>
+        let multab, i, j;
+        i = 1;
+        j = 2;
+        multab = "<table style='margin: auto' border='1'>";
+        while (i <= 9){
+            multab = multab + "<tr>";
+            while (j <= 9){
+                multab = multab + "<td width='120px'>" + (j+"x"+i+"="+i*j) +"</td>";
+                j++;
+            }
+            multab = multab +"</tr>";
+            j = 2;
+            i++;
+        }
+        multab = multab +"</table>";
+        document.write(multab);
+
+    </script>
+</body>
+</html>

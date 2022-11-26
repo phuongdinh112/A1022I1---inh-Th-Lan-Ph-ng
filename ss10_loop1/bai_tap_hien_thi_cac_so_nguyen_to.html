@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap hien thi cac so nguyen to</title>
+</head>
+<body>
+    <script>
+        let number = +prompt("Enter your expected number:");
+        let count1 = 0;
+        let count = 0;
+            for (let N=2;count<number;N++){
+                count1 = 0;
+                for (let i = 1; i <= N; i++){
+                    if ( N % i == 0){
+                        count1++;
+                    }
+                }
+                if(count1==2){
+                    document.write(N+ "<br/>");
+                    count++;
+                }
+            }
+
+    </script>
+</body>
+</html>

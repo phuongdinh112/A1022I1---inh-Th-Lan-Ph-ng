@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap vong lap 1 bai 4</title>
+</head>
+<body>
+    <script>
+        const number = 20;
+        let n1 = 0;
+        let n2 = 1;
+        let nextTerm;
+        document.write('Số đầu tiên trong dãy Fibonacci chia hết cho 5 là:'+"<br/>");
+        for (let i = 1; ; i++) {
+            nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+            if(n2%5==0){
+                document.write(n2);
+            };
+            if (n2%5===0){
+                break;
+            }
+        }
+    </script>
+</body>
+</html>
