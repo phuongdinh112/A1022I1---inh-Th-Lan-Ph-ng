@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang 2 bai 6</title>
+</head>
+<body>
+    <script>
+        let array = [];
+        let a = +prompt("Nhập độ dài chuỗi kí tự");
+        for (let i = 0; i < a ; i++) {
+            array[i] = prompt("Nhập ký tự");
+        }
+        for (let i = 0; i < array.length ; i++) {
+            if(array[i] === "-"){
+                array[i] = "_";
+            }
+        }
+        document.write(array.join(""));
+    </script>
+</body>
+</html>

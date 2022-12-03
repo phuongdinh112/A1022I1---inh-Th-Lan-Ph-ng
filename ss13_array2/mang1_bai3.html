@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang 1 bai 3</title>
+</head>
+<body>
+    <script>
+        interger = [4,6,23,43,56,78,64,98,48,37];
+        let max = 0;
+        let sum = 0;
+        for (let i = 0; i < interger.length ; i++) {
+            sum += interger[i];
+            if (interger[i]>max){
+                max = interger[i];
+            }
+        }
+        ave = sum/interger.length;
+        document.write("Giá trị lớn nhất trong mảng là: " + max + "<br/>" + "Giá trị trung bình của mảng là: " + ave);
+
+    </script>
+</body>
+</html>

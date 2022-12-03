@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap tu dien</title>
+</head>
+<body>
+    <p>Nhập từ cần dịch</p>
+    <input type="text" id="fromText"/>
+    <input type="button" value="Tìm" id="trans" onclick="transText()"/>
+    <br/>
+    <p>Kết quả</p>
+    <h2 id="result"></h2>
+    <script>
+        arr1 = ["apple","orange","mango","guava","pomegranate","durian","dragon fruit","watermelon"];
+        arr2 = ["táo","cam","xoài","ổi","lựu","sầu riêng","thanh long","dưa hấu"];
+        let b = document.getElementById("fromText");
+        const rs = document.getElementById("result");
+        function check() {
+            for (let i = 0; i < arr1.length; i++) {
+                if (b.value === arr1[i]) {
+                    return arr2[i];
+                } else {
+                    continue;
+                }
+            }
+        }
+        function transText() {
+            const checked = check();
+            console.log(checked);
+            if (checked !== undefined){
+                rs.innerHTML = checked;
+            } else {
+                alert("Không tồn tại");
+            }
+        }
+
+    </script>
+</body>
+</html>

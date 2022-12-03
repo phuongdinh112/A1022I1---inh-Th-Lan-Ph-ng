@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang 1 bai 2</title>
+</head>
+<body>
+    <script>
+        interger = [1,4,7,45,14,65,79,35,47,89];
+        let max = interger[0];
+        let num = 0;
+        for (let i = 0; i < interger.length ; i++) {
+            if(interger[i]>max){
+                max = interger[i];
+                num = i;
+            }
+        }
+        document.write("Phần tử lớn nhất trong mảng là: " + max +"<br/>" + "Vị trí của phần tử đó trong mảng là: " + num);
+    </script>
+</body>
+</html>

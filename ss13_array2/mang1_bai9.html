@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang 1 bai 9</title>
+</head>
+<body>
+    <script>
+        let a = [];
+        let b =[];
+        for (let i = 0; i < 10 ; i++) {
+            a[i] = +prompt("Nhập vào phần tử thứ " + i);
+        }
+        document.write("Mảng a: " + a + "<br/>");
+        for (let i = 0; i < 10 ; i++) {
+            b[i] = +prompt("Nhập vào phần tử thứ " + i);
+        }
+        document.write("Mảng b: " + b + "<br/>");
+        let c = a.concat(b);
+        document.write("Mảng c - nối 2 mảng a và b là: " + c);
+
+    </script>
+</body>
+</html>
