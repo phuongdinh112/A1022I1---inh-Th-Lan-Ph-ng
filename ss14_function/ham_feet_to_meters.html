@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ham chuyen doi feet to meters</title>
+</head>
+<body>
+
+</body>
+<script>
+    function footToMeter(n) {
+        meter = 0.305*n;
+        document.write(n + " feet bằng " + meter + " meter" + "<br>");
+    }
+    let number = +prompt("Nhập vào số liệu cần chuyển qua meter");
+    footToMeter(number);
+    function meterToFeet(num) {
+        feet = 3.279*num;
+        document.write(num + " meter bằng " + feet + " feet");
+    }
+    let a = +prompt("Nhập vào số liệu cần chuyển qua foot");
+    meterToFeet(a);
+</script>
+</html>

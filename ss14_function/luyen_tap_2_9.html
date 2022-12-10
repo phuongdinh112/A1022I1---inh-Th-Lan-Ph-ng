@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 2 bai 9</title>
+</head>
+<body>
+
+</body>
+<script>
+    arr=[1,2,3,4,"a","b","c","d",4,3,2,1]
+    function countCharacterInArray(a) {
+        let count = 0;
+        for (let i = 0; i < arr.length ; i++) {
+            if(a == arr[i]){
+                count++;
+            }
+        }
+        if(count === 0){
+            return -1;
+        }
+        return count;
+    }
+    let character = prompt("Nhập vào ký tự cần tìm trong mảng");
+    let result = countCharacterInArray(character);
+    if(countCharacterInArray(character)){
+        document.write("Số lượng ký tự " + character+ " có trong mảng là: " + result);
+    }
+</script>
+</html>

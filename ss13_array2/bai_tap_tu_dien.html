@@ -16,12 +16,11 @@
         arr2 = ["táo","cam","xoài","ổi","lựu","sầu riêng","thanh long","dưa hấu"];
         let b = document.getElementById("fromText");
         const rs = document.getElementById("result");
+
         function check() {
             for (let i = 0; i < arr1.length; i++) {
                 if (b.value === arr1[i]) {
                     return arr2[i];
-                } else {
-                    continue;
                 }
             }
         }

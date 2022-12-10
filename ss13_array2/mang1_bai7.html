@@ -12,7 +12,7 @@
         }
         let v = +prompt("Nhập vào phần tử V:");
         let c = array.indexOf(v);
-        if(array.includes(v)){
+        if(c >= 0){
             array.splice(c,1);
         }
         document.write(array);

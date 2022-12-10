@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 2 bai 2</title>
+</head>
+<body>
+
+</body>
+<script>
+    function calculateAreaOfCircle(radius) {
+        area = radius*radius*3.14;
+        document.write("Diện tích hình tròn có bán kính " + radius + " là " + area + "<br/>");
+    }
+    function calPerimeterOfCircle(radius) {
+        perimeter = radius*2*3.14;
+        document.write("Chu vi hình tròn có bán kính " + radius + " là " + perimeter);
+    }
+    let b = +prompt("Nhập vào bán kính hình tròn");
+    calculateAreaOfCircle(b);
+    calPerimeterOfCircle(b);
+</script>
+</html>

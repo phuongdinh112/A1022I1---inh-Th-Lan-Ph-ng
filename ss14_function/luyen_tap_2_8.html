@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap 2 bai 8</title>
+</head>
+<body>
+
+</body>
+<script>
+    function reserveArr(arr) {
+        let temp = 0;
+        for (let i = 0; i < (arr.length)/2; i++) {
+            temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
+        }
+        document.write("Mảng sau khi đảo ngược là: " + arr);
+    }
+    let array = [1,2,3,4,5];
+    reserveArr(array);
+</script>
+</html>

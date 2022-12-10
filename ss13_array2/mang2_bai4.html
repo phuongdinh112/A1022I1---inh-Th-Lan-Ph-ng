@@ -6,13 +6,14 @@
 </head>
 <body>
     <script>
-        let array = prompt("Nhập vào chuỗi:");
-        let count = 1;
-        for (let i = 0; i < array.length ; i++) {
-            if(array[i] === " "){
-                count++;
-            }
-        }
+        let str = prompt("Nhập vào chuỗi:");
+        count = str.split(" ").length;
+        // let count = 1;
+        // for (let i = 0; i < array.length ; i++) {
+        //     if(array[i] === " "){
+        //         count++;
+        //     }
+        // }
         document.write("Số từ có trong chuỗi là: " + count);
     </script>
 </body>
