@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung lop mo ta hinh chu nhat</title>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+</body>
+<script>
+    function Rectangle(long, wide){
+        this.long = long;
+        this.wide = wide;
+        this.Area = function area() {
+            return long*wide;
+        }
+        this.Perimeter = function perimeter() {
+            return (long + wide)*2;
+        }
+    }
+    let rec = new Rectangle(80,120);
+    document.write("Diện tích hình chữ nhật là: " + rec.Area() + "<br>");
+    document.write("Chu vi hình chữ nhật là: " + rec.Perimeter());
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.strokeStyle = "blue";
+    ctx.strokeRect(0,0,rec.wide,rec.long);
+</script>
+</html>

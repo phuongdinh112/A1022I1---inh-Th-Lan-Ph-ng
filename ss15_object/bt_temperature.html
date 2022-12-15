@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap xay dung lop mo ta Temperature</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Temperature(celcius) {
+        this.celcius = celcius;
+        this.transferCelciusToFahrenheit = function () {
+            return celcius*9/5+32;
+        }
+        this.transferCelciusToKenvin = function () {
+            return celcius+273.15;
+        }
+    }
+    let a = +prompt("Nhập vào nhiệt độ độ C: ")
+    let tem = new Temperature(a);
+    document.write(a + " độ C bằng " + tem.transferCelciusToFahrenheit() + " độ F." + "<br>");
+    document.write(a + " độ C bằng " + tem.transferCelciusToKenvin() + " độ K.");
+</script>
+</html>
